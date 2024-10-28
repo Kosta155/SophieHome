@@ -1,8 +1,3 @@
-import Button from "@mui/material/Button";
-import Logo from '/logo.png';
-import * as colors from '@mui/material/colors';
-
-
 
 function Gallery() {
     return (

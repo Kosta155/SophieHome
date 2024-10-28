@@ -1,9 +1,5 @@
 import Button from "@mui/material/Button";
 import TextField from '@mui/material/TextField';
-import Logo from '/logo.png'
-import * as colors from '@mui/material/colors';
-import { Typography } from '@mui/material';
-
 function Contact(){
     return(
        
