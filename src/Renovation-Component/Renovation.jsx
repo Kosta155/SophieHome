@@ -57,7 +57,6 @@ function Renovation() {
                                     height: { xs: '45px', sm: '60px', md: '45px'},
                                     width: '100%',
                                     borderRadius: '0px',
-                                    border: 'none',
                                     backgroundColor:'rgba(221, 44, 0, 0.8)',
                                     color: 'white',
                                     fontSize: '12px',
