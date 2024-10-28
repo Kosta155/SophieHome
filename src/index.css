@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    font-family: 'Roboto Bold', sans-serif;
+}
+
+.hide-dropdown{
+    display: hidden;
+}
+
+/* HEADER CSS STARTS*/
+.default-main-header-container{
+    @apply flex  justify-around h-1/3  p-1
+}
+.default-harmburger-icon
+{
+    @apply  p-1 justify-self-end
+}
+
+
+
+/* HEADER LIST CSS ENDS*/
+
+/* WORK LIST CSS STARTS*/
+
+
+/* WORK LIST CSS ENDS*/
+  
+/* SECTION ONE CSS STARTS*/
+.default-section-one-container{
+    @apply   h-100 bg-cover grid relative
+}
+.default-display-text{
+    @apply text-white text-center uppercase  font-bold italic
+}
+
+
+/* CONTACT CSS STARTS*/
+.default-contact-text{
+    @apply flex gap-3 w-11/12 
+}
