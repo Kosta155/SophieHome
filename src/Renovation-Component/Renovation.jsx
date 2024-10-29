@@ -27,11 +27,11 @@ const renovations = [
 ];
 
 function Renovation() {
-    return (
+    return ( 
         <div className=" bg-stone-800  pt-16  pb-16 grid ">
             <div className="grid justify-self-center  w-10/12 text-stone-800 gap-5 pt-16  pb-16 md:w-8/12 lg:grid-cols-3 lg:w-11/12 xl:w-10/12 2xl:w-8/12"  >
                 {renovations.map((item) => (
-                    <div key={item.id} className='grid   bg-white h-full '>
+                    <div key={item.id} className='grid   hover:-translate-y-3.5  duration-200 ease-in-out bg-white h-full '>
                         
                         <img src={item.imageSrc}  className='h-40 w-full object-cover  overflow-hidden' />
                         

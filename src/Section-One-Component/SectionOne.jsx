@@ -39,13 +39,13 @@ function SectionOne(){
                 <a href="#AboutUs">
                      <button  className="uppercase font-bold text-sm md:text-base">About</button> 
                 </a>
-                <a >
+                <a href='#Service_Section'>
                 <button className="uppercase font-bold text-sm md:text-base">Services</button> 
                 </a>
-                <a>
+                <a href='#Gallery'>
                 <button className="uppercase font-bold text-sm md:text-base">GALLERY</button> 
                 </a>
-                <a>
+                <a  href='#Contact'>
                 <button  className="uppercase font-bold text-sm md:text-base">Contact</button> 
                 </a>
               
