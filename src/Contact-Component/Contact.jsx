@@ -44,7 +44,7 @@ function Contact() {
                     },
                     body: JSON.stringify({
                         from: formData.email,
-                        to: 'recipient@example.com', // Replace with the recipient's email
+                        to: 'kostikanini2004@gmail.com', // Replace with the recipient's email
                         subject: `Message from ${formData.name}`,
                         text: formData.message,
                     }),
