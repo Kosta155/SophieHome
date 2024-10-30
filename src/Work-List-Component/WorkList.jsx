@@ -4,15 +4,15 @@ import React from 'react';
 const workList =[
     {
         id:1,
-        list:['Home Renovation','Home Restoration','Kitchen Renovation','Bathroom Renovation','Basement Renovation']
+        list:['Home Renovation','Kitchen Renovation','Bathroom Renovation','Basement Finishing']
     },
     {
         id:2,
-        list:['Hardwood Flooring','Stair Installation','Flooring Services','Kitchen Remodeling']
+        list:['Hardwood Flooring','Stair Installation','Waterproofing']
     },
     {
         id:3,
-        list:['Plastering','Remodeling','Drywall Services','Painting Services','Painting Services']
+        list:['Plastering','Remodeling','Drywall Services','Painting Services']
     }
 ]
 
