@@ -51,7 +51,7 @@ function Contact() {
                 });
 
                 if (response.ok) {
-                    console.log('Email sent very successfully!');
+                    console.log('Email sent successfully!');
                     setSuccess(true);
                     setFormData({
                         name: "",
