@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 function SectionOne(){
     return(
         <>
-        <section className="bg-sectionone-bg default-section-one-container lg:bg-center lg:mt-24">
+        <section className="bg-sectionone-bg default-section-one-container lg:bg-center ">
             <div className="section-Content grid place-content-center gap-3">
                 <h1 style={{textShadow: '3px 3px #d84315'}} className="text-7xl default-display-text md:text-8xl lg:text-9xl ">Alex</h1>
                 <h2 style={{textShadow: '2px 2px #d84315'}} className="text-xl default-display-text  md:text-2xl lg:text-3xl" >Home RENOVATIONS</h2>
