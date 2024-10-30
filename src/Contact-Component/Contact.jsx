@@ -11,7 +11,7 @@ function Contact() {
         message: ""
     });
     const [errors, setErrors] = useState({});
-    const [sucess, setSuccess] = useState(false);
+    const [success, setSuccess] = useState(false);
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -33,29 +33,45 @@ function Contact() {
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (validator()) {
-            //Kosta export form data to send an email
-            console.log("Form submitted:", formData);
+            try {
+                const response = await fetch('/api/sendEmail', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        from: formData.email,
+                        to: 'recipient@example.com', // Replace with the recipient's email
+                        subject: `Message from ${formData.name}`,
+                        text: formData.message,
+                    }),
+                });
 
-            setFormData(() => ({
-                name: "",
-                email: "",
-                number: "",
-                message: ""
-            }));
-            setSuccess(true);
-            setTimeout(() => {
-                setSuccess(false);
-            }, 2000);
+                if (response.ok) {
+                    console.log('Email sent successfully!');
+                    setSuccess(true);
+                    setFormData({
+                        name: "",
+                        email: "",
+                        number: "",
+                        message: ""
+                    });
+                    setTimeout(() => {
+                        setSuccess(false);
+                    }, 2000);
+                } else {
+                    console.error('Failed to send email:', response.statusText);
+                }
+            } catch (error) {
+                console.error('Error sending email:', error);
+            }
             setErrors({});
-            
         }
     };
 
-  
-    
     const renderTextField = (id, label, type = "text", multiline = false, rows = 1) => (
         <>
             <TextField
@@ -117,11 +133,8 @@ function Contact() {
                         {renderTextField("email", "EMAIL", "email")}
                         {renderTextField("number", "PHONE NUMBER")}
                         {renderTextField("message", "ENTER YOUR MESSAGE", "text", true, 5)}
-                        {sucess&&(
-                             <>
-                             <Alert variant="filled" severity="success" className="mt-2">Message Successfully Sent</Alert>
-                             </>
-
+                        {success && (
+                            <Alert variant="filled" severity="success" className="mt-2">Message Successfully Sent</Alert>
                         )}
                         <Button
                             type="submit"
@@ -142,7 +155,6 @@ function Contact() {
                         >
                             SUBMIT
                         </Button>
-                       
                     </form>
                 </div>
             </div>
