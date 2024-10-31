@@ -2,7 +2,7 @@ console.log("Jam njesh");
 
 import mailjet from 'node-mailjet';
 
-const mailjetClient = mailjet.connect(process.env.MAILJET_API_KEY, process.env.MAILJET_API_SECRET);
+const mailjetClient = mailjet.connect(process.env.MJ_APIKEY_PUBLIC, process.env.MJ_APIKEY_PRIVATE);
 
 export default async function handler(req, res) {
   const { from, to, subject, text } = req.body;
