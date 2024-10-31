@@ -18,9 +18,22 @@ module.exports = async (req, res) => {
 
   try {
     console.log("I am here");
-    const request = mailjet.post('send', { version: 'v3.1' }).request(emailData);
-    const result = await request;
-    console.log(result.body);
+    const request = mailjet.post('send', { version: 'v3.0' }).request({
+      "FromEmail":"kostikanini2004@gmail.com",
+      "FromName":"Your Mailjet Pilot",
+      "Recipients":[
+        {
+          "Email":"kostikanini2004@gmail.com",
+          "Name":"Passenger 1"
+        }
+      ],
+      "Subject":"Your email flight plan!",
+      "Text-part":"Dear passenger, welcome to Mailjet! May the delivery force be with you!",
+      "Html-part":"<h3>Dear passenger, welcome to Mailjet!</h3><br />May the delivery force be with you!"
+    })
+	.then((result) => {
+		console.log(result.body)
+	});
     res.status(200).json({ message: 'Email sent successfully!' });
   } catch (err) {
     console.error(err.statusCode);
