@@ -1,7 +1,6 @@
-console.log("I am here");
-console.log("I am not here")
+
 console.log("MAILJET_API_KEY:", process.env.MAILJET_API_KEY);
-const mailjet = require('node-mailjet').connect('f018b2921153de876f2d19e2499a567b', '6b4d093d11c56cff23104d30a738cdf5');
+const mailjet = require('node-mailjet').connect(process.env.MAILJET_API_KEY, process.env.MAILJET_API_SECRET);
 
 module.exports = async (req, res) => {
   const { from, to, subject, text } = req.body;
@@ -24,6 +23,6 @@ module.exports = async (req, res) => {
     res.status(200).json({ message: 'Email sent successfully!' });
   } catch (err) {
     console.error('Error:', err);
-    res.status(500).json({ message: 'Failed to send email', error: err.message });
+    res.status(500).json({ message: 'Failed to send the email', error: err.message });
   }
 };
