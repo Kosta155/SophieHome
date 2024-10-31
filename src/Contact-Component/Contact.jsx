@@ -44,9 +44,9 @@ function Contact() {
                     },
                     body: JSON.stringify({
                         from: 'kostikanini2004@gmail.com',
-                        to: 'kostikanini2004@gmail.com', 
-                        subject: `Message from ${formData.name}`,
-                        text: formData.message,
+                        to: 'kostikanini2004@gmail.com', // Replace with the recipient's email
+                        subject: `Message from kostika`,
+                        text:`Kostika Nini`,
                     }),
                 });
 

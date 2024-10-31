@@ -7,23 +7,23 @@ module.exports = async (req, res) => {
   const emailData = {
     Messages: [
       {
-        From: { Email: from, Name: 'Sender Name' },
-        To: [{ Email: to, Name: 'Recipient Name' }],
+        From: { Email: from, Name: 'Your Mailjet Pilot' },
+        To: [{ Email: to, Name: 'Recipient' }],
         Subject: subject,
         TextPart: text,
-        HTMLPart: `<p>${text}</p>`,
+        HTMLPart: `<h3>${text}</h3>`,
       },
     ],
   };
 
   try {
-    const response = await mailjet.post('send', { version: 'v6.0.6' }).request(emailData);
-    if (response.body.Messages[0].Status === 'success') {
-      res.status(200).json({ message: 'Email sent successfully!' });
-    } else {
-      res.status(500).json({ message: 'Failed to send email' });
-    }
-  } catch (error) {
-    res.status(500).json({ message: 'Failed to send email', error: error.message });
+    console.log("I am here");
+    const request = mailjet.post('send', { version: 'v3.1' }).request(emailData);
+    const result = await request;
+    console.log(result.body);
+    res.status(200).json({ message: 'Email sent successfully!' });
+  } catch (err) {
+    console.error(err.statusCode);
+    res.status(500).json({ message: 'Failed to send email', error: err.message });
   }
 };
