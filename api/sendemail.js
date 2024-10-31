@@ -1,21 +1,10 @@
 // api/sendemail.js
+console.log("I am here");
+console.log(process.env.MAILJET_API_KEY);
 const mailjet = require('node-mailjet').connect(process.env.MAILJET_API_KEY, process.env.MAILJET_API_SECRET);
 
 module.exports = async (req, res) => {
   const { from, to, subject, text } = req.body;
-
-  const emailData = {
-    Messages: [
-      {
-        From: { Email: from, Name: 'Your Mailjet Pilot' },
-        To: [{ Email: to, Name: 'Recipient' }],
-        Subject: subject,
-        TextPart: text,
-        HTMLPart: `<h3>${text}</h3>`,
-      },
-    ],
-  };
-
   try {
     console.log("I am here");
     const request = mailjet.post('send', { version: 'v3.0' }).request({
