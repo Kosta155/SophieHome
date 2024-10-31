@@ -37,7 +37,7 @@ function Contact() {
         e.preventDefault();
         if (validator()) {
             try {
-                const response = await fetch('/api/sendEmail', {
+                const response = await fetch('/api/sendemail', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

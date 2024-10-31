@@ -1,4 +1,4 @@
-// api/sendEmail.js
+// api/sendemail.js
 const mailjet = require('node-mailjet').connect(process.env.MAILJET_API_KEY, process.env.MAILJET_API_SECRET);
 
 module.exports = async (req, res) => {
