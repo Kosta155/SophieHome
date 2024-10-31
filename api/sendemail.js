@@ -1,4 +1,5 @@
 console.log("I am here");
+console.log("I am not here")
 console.log("MAILJET_API_KEY:", process.env.MAILJET_API_KEY);
 const mailjet = require('node-mailjet').connect(process.env.MAILJET_API_KEY, process.env.MAILJET_API_SECRET);
 
