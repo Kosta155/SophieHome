@@ -5,7 +5,6 @@ import mailjet from 'node-mailjet';
 const mailjetClient = mailjet.apiConnect(process.env.MAILJET_API_KEY, process.env.MAILJET_API_SECRET);
 
 export default async function handler(req, res) {
-  const { from, to, subject, text } = req.body;
 
   try {
     const request = await mailjetClient.post('send', { version: 'v3.0' }).request({
