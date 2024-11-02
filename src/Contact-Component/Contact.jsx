@@ -43,10 +43,10 @@ function Contact() {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        from: 'kostikanini2004@gmail.com',
-                        to: 'kostikanini2004@gmail.com', // Replace with the recipient's email
-                        subject: `Message from kostika`,
-                        text:`Kostika Nini`,
+                        email: formData.email,
+                        name: formData.name,
+                        number: formData.number,
+                        message: formData.message ,
                     }),
                 });
 

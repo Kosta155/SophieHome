@@ -6,18 +6,29 @@ const mailjetClient = mailjet.apiConnect(process.env.MAILJET_API_KEY, process.en
 export default async function handler(req, res) {
 
   try {
+    const { email, name, number, message } = req.body;
+    const htmlContent = `
+    <p>Here’s the information for the new customer</p>
+    <ul>
+        <li><h3>Email:</h3> ${email}</li>
+        <li><h3>Name:</h3> ${name}</li>
+        <li><h3>Phone Number:</h3> ${number}</li>
+        <li><h3>Message:</h3> ${message}</li>
+    </ul>
+`;
+
     const request = await mailjetClient.post('send', { version: 'v3' }).request({
       "FromEmail": "kostikanini2004@gmail.com",
       "FromName": "Your Mailjet Pilot",
       "Recipients": [
         {
-          "Email": "kostikanini2004@gmail.com",
-          "Name": "Passenger 1"
+          "Email": "oladegafuwad7@gmail.com",
+          "Name": name
         }
       ],
       "Subject": "Your email flight plan!",
-      "Text-part": "Dear passenger, welcome to Mailjet! May the delivery force be with you!",
-      "Html-part": "<h3>Dear passenger, welcome to Mailjet!</h3><br />May the delivery force be with you!"
+      "Text-part": "Email: " + email + " Name:" + name + " Phone number:" + number + " Message" + message,  
+      "Html-part": htmlContent
     });
     console.log("Mailjet response:", request.body);
     res.status(200).json({ message: 'Email sent successfully!' });
