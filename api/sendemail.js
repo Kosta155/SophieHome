@@ -19,7 +19,7 @@ export default async function handler(req, res) {
 
     const request = await mailjetClient.post('send', { version: 'v3' }).request({
       "FromEmail": "kostikanini2004@gmail.com",
-      "FromName": "Your Mailjet Pilot",
+      "FromName": "Website New client: " + name,
       "Recipients": [
         {
           "Email": "oladegafuwad7@gmail.com",
