@@ -13,7 +13,7 @@ function App() {
  
 
   return (
-    <>
+    <div className='lg:pt-24'>
     
        <Header />
        <SectionOne/>
@@ -25,7 +25,7 @@ function App() {
        <Contact />
 
        <Footer />
-    </>
+    </div>
   )
 }
 

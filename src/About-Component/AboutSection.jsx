@@ -2,7 +2,7 @@ import Button from "@mui/material/Button";
 //test 
 //test 2
 function AboutSection(){
-    return(<>
+    return(<div>
     
     <section id='AboutUs' className="mt-20 mb-36 grid justify-center" >
 
@@ -55,6 +55,6 @@ function AboutSection(){
 
     
     
-    </>)
+    </div>)
 }
 export default AboutSection;
