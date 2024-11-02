@@ -48,6 +48,7 @@ function Renovation() {
                                 ))}
                                 <hr className=''/>
                             </div>
+                            <a href="#Contact">
                             <Button
                                 variant="contained"
                                 sx={{
@@ -70,6 +71,9 @@ function Renovation() {
                                 >
                                 CONTACT US
                                 </Button>
+
+                            </a>
+                            
                         </div>
                     </div>
                 ))}

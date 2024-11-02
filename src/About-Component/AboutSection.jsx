@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 function AboutSection(){
     return(<div>
     
-    <section id='AboutUs' className="mt-20 mb-36 grid justify-center" >
+    <section id='AboutUs' className="mt-20 mb-36 grid justify-center scroll-mt-24" >
 
         <div  className=" w-11/12  justify-self-center grid gap-2 md:w-9/12 md:justify-self-center md:gap-3 lg:grid-cols-2 lg:w-11/12 lg:gap-0 xl:w-10/12 2xl:w-8/12">
             <div  className="grid   text-sm text-gray-500 leading-loose gap-2 md:text-lg md:gap-3 lg:gap-3 xl:gap-0  xl:text-lg" >
@@ -25,6 +25,7 @@ function AboutSection(){
 
             <div className="grid gap-2 justify-self-center md:gap-3 xl:w-10/12 xl:justify-self-end ">
                 <img src="https://sensodesign.ca/wp-content/uploads/2024/06/Modern-kitchen-renovation-in-Toronto.jpg" className="cover"></img>
+                <a href="#Gallery">
                 <Button
                     variant="contained"
                     sx={{
@@ -48,6 +49,9 @@ function AboutSection(){
                     VIEW GALLERY
                     <span className="material-icons">trending_flat</span>
                     </Button>
+
+                </a>
+                
                   
             </div>
         </div>

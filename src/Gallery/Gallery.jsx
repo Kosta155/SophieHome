@@ -21,8 +21,8 @@ const arrayListImage=
 function Gallery() {
     return (
         <>
-        <div id='Gallery' className="grid my-10">
-            <div className="justify-self-center grid w-10/12 md:9/12 2xl:w-8/12 gap-y-7 lg:gap-y-8 xl:gap-y-10">
+        <div id='Gallery' className="grid my-10 lg:scroll-mt-24 ">
+            <div className="justify-self-center grid w-10/12 md:9/12   2xl:w-8/12 gap-y-7 lg:gap-y-8 xl:gap-y-10">
                 <h2 className="text-center font-bold text-3xl md:text-4xl 2xl:6xl">Gallery</h2>
                 <div className='grid grid-cols-2  gap-2 mb-15 md:grid-cols-4 lg:mb-24 xl:grid-cols-6 '>
                     

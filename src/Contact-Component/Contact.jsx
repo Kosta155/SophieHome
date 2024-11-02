@@ -78,7 +78,7 @@ function Contact() {
     );
 
     return (
-        <div id="Contact" className="bg-stone-800 text-white grid justify-center mt-0 py-20 uppercase">
+        <div id="Contact" className="bg-stone-800 text-white grid justify-center mt-0 py-20 uppercase scroll-mt-44 ">
             <div className="justify-self-center w-11/12 md:w-10/12 lg:grid grid-cols-2 lg:w-11/12 gap-x-3 xl:w-10/12 xl:gap-3">
                 <div className="space-y-10">
                     <div className="font-bold space-y-2">
