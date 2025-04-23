@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
         backgroundImage: {
-          'sectionone-bg': "url('https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?cs=srgb&dl=pexels-fotoaibe-1571458.jpg&fm=jpg')",
+          'sectionone-bg': "url('https://www.goaccess.co.uk/wp-content/uploads/2019/07/AdobeStock_158746108-1024x683.jpeg')",
           'footer-texture': "url('/img/footer-texture.png')",
         },
 

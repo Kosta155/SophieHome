@@ -13,7 +13,7 @@ function App() {
  
 
   return (
-    <div className='lg:pt-24 '>
+    <div className='lg:pt-24 bg-stone-700 '>
     
        <Header />
        <SectionOne/>
