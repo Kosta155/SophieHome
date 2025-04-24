@@ -21,7 +21,6 @@ function App() {
        <WorkList />
        <Product />
        <Renovation />
-       <Gallery />
        <Contact />
 
        <Footer />

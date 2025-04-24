@@ -19,34 +19,8 @@ function AboutSection(){
             </div>
 
             <div className="grid gap-2 justify-self-center md:gap-3 xl:w-10/12 xl:justify-self-end ">
-                <img src="https://sensodesign.ca/wp-content/uploads/2024/06/Modern-kitchen-renovation-in-Toronto.jpg" className="cover"></img>
-                <a href="#Gallery">
-                <Button
-                    variant="contained"
-                    sx={{
-                        height: { xs: '45px', sm: '45px', md: '45px'},
-                        width: { xs: '180px', sm: '180px', md: '180px' },
-                        borderRadius: '0px',
-                        backgroundColor: 'rgba(41, 37, 36, 0.9)',
-                        color: 'white',
-                        fontSize: '15px',
-                        fontWeight: 700,
-                        border: 'none',
-                        cursor: 'pointer',
-                        transition: 'background-color 0.4s ease',
-                        justifySelf:"start",
-                        '&:hover': {
-                        backgroundColor: 'rgba(221, 44, 0, 0.6)'
-                        
-                        },
-                    }}
-                    >
-                    VIEW GALLERY
-                    <span className="material-icons">trending_flat</span>
-                    </Button>
-
-                </a>
-                
+                <img src="https://www.chip.ca/wp-content/uploads/personal-support-worker-helping-elderly-woman.png" className="cover"></img>
+                    
                   
             </div>
         </div>

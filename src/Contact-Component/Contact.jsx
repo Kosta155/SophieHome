@@ -98,29 +98,24 @@ function Contact() {
             <div className="justify-self-center w-11/12 md:w-10/12 lg:grid grid-cols-2 lg:w-11/12 gap-x-3 xl:w-10/12 xl:gap-3">
                 <div className="space-y-10">
                     <div className="font-bold space-y-2">
-                        <h3 className="text-lg md:text-xl">Alex Home Renovations</h3>
-                        <h1 className="text-3xl md:text-5xl lg:text-3xl xl:text-4xl">Contact Us Now!</h1>
+                        <h3 className="text-lg md:text-xl">SophAri Care</h3>
+                        <h1 className="text-3xl md:text-5xl lg:text-3xl xl:text-4xl">Get in Touch</h1>
                     </div>
                     <div className="grid gap-5 md:grid-cols-2 lg:gap-3">
                         <div className="default-contact-text">
                             <span className="material-icons" style={{ color: "#d84315" }}>email</span>
                             <div className="space-y-1">
                                 <h4 className="font-bold text-md md:text-xl">OUR EMAIL</h4>
-                                <p className="md:text-lg lowercase">info@alexrenovations.com</p>
+                                <p className="md:text-lg lowercase">info@sophari.com.au</p>
                             </div>
                         </div>
-                        <div className="default-contact-text">
-                            <span className="material-icons" style={{ color: "#d84315" }}>map</span>
-                            <div className="space-y-1">
-                                <h4 className="font-bold text-md md:text-xl">Address</h4>
-                                <p className="md:text-lg lowercase">1234, ABC, Brampton, Ontario, L6E 4X9, Canada</p>
-                            </div>
-                        </div>
+                        
                         <div className="default-contact-text">
                             <span className="material-icons" style={{ color: "#d84315" }}>phone</span>
                             <div className="space-y-1">
                                 <h4 className="font-bold text-md md:text-xl">Phone Number</h4>
-                                <p className="md:text-lg lowercase">419-999-0241</p>
+                                <p className="md:text-lg lowercase">0414087185</p>
+                                <p className="md:text-lg lowercase">0469757202</p>
                             </div>
                         </div>
                         <span className="material-icons w-64" style={{ color: "#d84315" }}>facebook</span>
@@ -143,7 +138,7 @@ function Contact() {
                                 height: { xs: "60px", sm: "75px", md: "90px" },
                                 width: { xs: "150px", sm: "180px", md: "220px" },
                                 borderRadius: "5px",
-                                backgroundColor: "rgba(221, 44, 0, 0.8)",
+                                backgroundColor: "#A8A29E",
                                 color: "white",
                                 fontSize: { xs: "16px", sm: "18px", md: "20px", lg: "22px" },
                                 fontWeight: 700,

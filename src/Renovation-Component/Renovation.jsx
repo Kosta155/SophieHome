@@ -5,24 +5,31 @@ import Button from "@mui/material/Button";
 const renovations = [
     {
         id: 1,
-        title: "Kitchen renovations",
-        description: "Our team works with you to create plans for your new kitchen and dining area. Together we’ll choose the layout that brings your vision to life.",
+        title: "Assistance with Daily Living",
+        description: "Support with everyday tasks, personal care, and home management.",
         features: ["MODERN DESIGN", "Flooring / Countertops", "Backsplashes, fixtures & more"],
-        imageSrc: "https://www.kitchensbyauthentic.ca/wp-content/uploads/2023/11/newly-renovated-kitchen.jpg" 
+        imageSrc: "https://www.chip.ca/wp-content/uploads/personal-support-worker-helping-elderly-woman.png" 
     },
     {
         id: 2,
-        title: "Bathroom renovations",
-        description: "The bathroom certainly adds additional value in the home. We are here to help design with your layout and choose the right materials all while staying within your budget.",
+        title: "Community Access",
+        description: "Helping participants engage in their local community and access essential services.",
         features: ["Remodeling", "Demolition", "Plumbing / Electrical & more"],
-        imageSrc:"https://kitchenandbath.ca/wp-content/uploads/2023/02/Bathroom_1.jpg" 
+        imageSrc:"https://www.chip.ca/wp-content/uploads/personal-support-worker-helping-elderly-woman.png" 
     },
     {
         id: 3,
-        title: "Basement renovations",
-        description: "From start to finish our team can help you throughout the whole basement renovation process. We will gain an understanding of your true needs, before developing an intuitive, efficient design tailored to your budget.",
+        title: "Socialisation and Group Activities",
+        description: "Organising events and activities to promote social interaction and build connections.",
         features: ["Finishing", "Waterproofing", "Soundproofing & more"],
-        imageSrc: "https://www.totalrenotech.ca/wp-content/uploads/2023/10/basement-renovation.jpg" 
+        imageSrc: "https://www.chip.ca/wp-content/uploads/personal-support-worker-helping-elderly-woman.png" 
+    },
+    {
+        id: 4,
+        title: "Complex Nursing Care",
+        description: "Providing specialised nursing care for participants with more advanced medical needs.",
+        features: ["Finishing", "Waterproofing", "Soundproofing & more"],
+        imageSrc: "https://www.chip.ca/wp-content/uploads/personal-support-worker-helping-elderly-woman.png" 
     }
 ];
 
@@ -35,15 +42,13 @@ function Renovation() {
                         
                         <img src={item.imageSrc}  className='h-40 w-full object-cover  overflow-hidden' />
                         
-                        <div className='grid gap-3 px-5 py-10 md:gap-3'>
+                        <div className='grid gap-4 px-5 py-10 md:gap-3'>
                             <h4 className='text-wrap font-bold text-xl uppercase'>{item.title}</h4>
                             <p className="text-gray-500 text-sm leading-loose md:text-base xl:text-lg" >{item.description}</p>
 
                             <div className="text-gray-500 text-md">
                                 {item.features.map((feature, index) => (
                                     <React.Fragment key={index}>
-                                        <hr className='py-3'/>
-                                        <span className='uppercase font-bold text-sm md:text-base'>{feature}</span>
                                     </React.Fragment>
                                 ))}
                                 <hr className=''/>
@@ -55,7 +60,7 @@ function Renovation() {
                                     height: { xs: '45px', sm: '60px', md: '45px'},
                                     width: '100%',
                                     borderRadius: '0px',
-                                    backgroundColor:'rgba(221, 44, 0, 0.8)',
+                                    backgroundColor:'#A8A29E',
                                     color: 'white',
                                     fontSize: '12px',
                                     fontWeight: 700,
